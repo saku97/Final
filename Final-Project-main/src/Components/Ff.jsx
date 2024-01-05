@@ -15,7 +15,7 @@ export const Field = ({
       <div className="flex items-center gap-2 mb-2">
         <label
           htmlFor={name}
-          className="block texte-sm font-medium text-gray-900"
+          className="block text-xl font-medium  text-[#d6dadd]"
         >
           {LabelName}
         </label>
@@ -23,7 +23,7 @@ export const Field = ({
           <button
             type="button"
             onClick={handleSurpriseMe}
-            className="font-semibold text-xs bg-[#ECECF1] py-1 px-2 rounded-[5px] text-black"
+            className="font-semibold text-base bg-[#ECECF1] py-1 px-2 rounded-[5px] text-black"
           >
             Surprise me
           </button>

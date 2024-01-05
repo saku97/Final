@@ -75,10 +75,10 @@ const CrP = () => {
           Create & Generate
         </h1>
         <p className="mt-2  text-[#d6dadd] text-[30px] max-w[500px]">
-          Create visually stunning images with just a simple sentence{" "}
+          Create visually stunning images with just a simple sentence
         </p>
       </article>
-      <form className="mt-16 max-w-3xl" onSubmit={handleSubmit}>
+      <form className="mt-16 max-w-3xl  " onSubmit={handleSubmit}>
         <div className="flex flex-col gap-5">
           <Field
             LabelName="Your Name"
@@ -98,6 +98,7 @@ const CrP = () => {
             isSurpriseMe
             handleSurpriseMe={handleSurpriseMe}
           />
+
           <div className="relative bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-64 p-3 h-64 flex justify-center">
             {form.photo ? (
               <img
@@ -123,19 +124,19 @@ const CrP = () => {
           <button
             type="button"
             onClick={generateImage}
-            className="text-white bg-[#6469ff] font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+            className="text-white bg-[#182c50] font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center"
           >
             {generateImg ? "Generating..." : "Generate"}
           </button>
         </div>
         <div className="mt-10">
-          <p className="mt-2 text-[#666e75] text-[14px]">
+          <p className="mt-2 text-[#666e75] font-semibold text-[18px]">
             Once you have created the image you want, you can share it with
-            others in the community
+            others in the homepage.
           </p>
           <button
             type="submit"
-            className="text-white bg-[#6469ff] font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center mt-4"
+            className="text-white bg-[#182c50] font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center mt-4"
           >
             {isLoading ? "Sharing..." : "Share with the community"}
           </button>
