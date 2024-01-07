@@ -1,6 +1,5 @@
 import LoadIcon from "./LoadingIcon";
 import { Card } from "./Card";
-import { Field } from "./Ff.JSX";
+import { Field } from "./Ff";
 
-
-export {LoadIcon,Card,Field}
+export { LoadIcon, Card, Field };

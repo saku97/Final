@@ -3,7 +3,7 @@ import { LoadIcon, Card, Field } from "../Components";
 import { logo } from "../assets";
 
 const RenderCards = ({ data, title }) => {
-  if (data?.lenght > 0) {
+  if (data?.length > 0) {
     return data.map((post) => <Card key={post._id} {...post} />);
   }
   return (
@@ -27,9 +27,9 @@ const Home = () => {
             "Content-Type": "application/json",
           },
         });
-        if (Response.ok) {
+        if (response.ok) {
           const result = await response.json();
-          setPosts(result.data.reverse());
+          setPosts(result.data);
         }
       } catch (error) {
         alert(error);

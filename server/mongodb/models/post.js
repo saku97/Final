@@ -5,6 +5,9 @@ const Post = mongoose.Schema({
   photo: { type: String, required: true },
 });
 
+// timestamps
+Post.set("timestamps", true);
+
 const PostSchema = mongoose.model("Post", Post);
 
 export default PostSchema;

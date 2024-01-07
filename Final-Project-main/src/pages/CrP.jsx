@@ -39,20 +39,24 @@ const CrP = () => {
   };
   // 1:37:54
   const handleSubmit = async (e) => {
-    e.prevent.default();
+    e.preventDefault();
     if (form.prompt && form.photo) {
       setIsLoading(true);
       try {
         const response = await fetch("http://localhost:8080/api/v1/post", {
           method: "POST",
           headers: {
-            "Content-Type ": "application/json",
+            "Content-Type": "application/json",
           },
           body: JSON.stringify(form),
+        }).catch((err) => {
+          console.log(err);
         });
+
         await response.json();
-        navigate("/");
+        nav("/");
       } catch (err) {
+        console.log(err);
         alert(err);
       } finally {
         setIsLoading(false);
