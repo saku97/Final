@@ -17,14 +17,20 @@ router.route("/").post(async (req, res) => {
       prompt,
       n: 1,
       size: "1024x1024",
-      // response_format: "b64_json",
+      response_format: "b64_json",
     });
     console.log("");
     // const image = aiResponse.data.data[0].b64_json;
     console.log(aiResponse.data);
-    const image_url = aiResponse.data[0].url;
+    const image_url = aiResponse.data[0].b64_json;
 
-    res.status(200).json({ photo: image_url });
+    console.log(image_url);
+
+    res.status(200).json({
+      photo:
+        // append the base64 image to the data URI
+        `data:image/jpeg;base64,${image_url}`,
+    });
   } catch (error) {
     console.log(error);
     res.status(500).send(error?.response?.data?.error?.message);
